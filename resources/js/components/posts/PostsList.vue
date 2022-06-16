@@ -21,7 +21,7 @@
                                 <p class="card-text article">
                                     {{post.content}}
                                 </p>
-                                <button class="btn btn-primary">Leggi</button>
+                                <router-link class="btn btn-primary" :to="{name: 'post-detail', params: {id: post.id}}">Leggi</router-link>
                             </div>
                         </div>
                     </div>

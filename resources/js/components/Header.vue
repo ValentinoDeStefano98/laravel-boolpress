@@ -11,10 +11,13 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item active">
-                        <router-link class="nav-link" to="/">Home</router-link>
+                        <router-link class="nav-link" :to="{name: 'home'}">Home</router-link>
                     </li>
                     <li class="nav-item active">
-                        <router-link class="nav-link" to="/contacts">Contatti</router-link>
+                        <router-link class="nav-link" :to="{name: 'contacts'}">Contatti</router-link>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/admin/posts">Admin</a>
                     </li>
                 </ul>
             </div>

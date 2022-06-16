@@ -1,7 +1,7 @@
 <template>
     <div>
         <h2>error 404</h2>
-        <button class="btn btn-primary"></button>
+        <button class="btn btn-primary" @click="$router.back()">Indietro</button>
     </div>
 </template>
 
