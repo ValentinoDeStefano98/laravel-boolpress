@@ -1,6 +1,6 @@
 <template>
     <div>
-        <PostList />
+        Contatti
     </div>
 </template>
 

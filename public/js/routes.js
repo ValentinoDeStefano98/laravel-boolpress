@@ -2648,10 +2648,10 @@ __webpack_require__.r(__webpack_exports__);
       var _this = this;
 
       axios__WEBPACK_IMPORTED_MODULE_0___default().get("http://127.0.0.1:8000/api/posts").then(function (res) {
-        var _res$data = res.data,
-            data = _res$data.data,
-            current_page = _res$data.current_page,
-            last_page = _res$data.last_page;
+        var _res$data$posts = res.data.posts,
+            data = _res$data$posts.data,
+            current_page = _res$data$posts.current_page,
+            last_page = _res$data$posts.last_page;
         _this.posts = data;
         _this.pagination = {
           lastPage: last_page,
@@ -5913,7 +5913,7 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [_c("PostList")], 1)
+  return _c("div", [_vm._v("\n    Contatti\n")])
 }
 var staticRenderFns = []
 render._withStripped = true

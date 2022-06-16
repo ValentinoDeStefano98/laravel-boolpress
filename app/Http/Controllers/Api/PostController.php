@@ -17,7 +17,7 @@ class PostController extends Controller
     {
         //$posts = Post::orderBy('updated_at', 'DESC')->with('tags', 'Category')->get();
         //paginazione
-        $posts = Post::orderBy('updated_at', 'DESC')->with('tags', 'Category')->paginate(5);
+        $posts = Post::orderBy('updated_at', 'DESC')->with('Category', 'test')->paginate(5);
         return response()->json($posts);
     }
 
