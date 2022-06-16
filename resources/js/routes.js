@@ -5,6 +5,7 @@ Vue.use(VueRouter)
 
 import HomePage from './components/pages/HomePage.vue';
 import ContactPage from './components/pages/ContactPage.vue';
+import NotFoundPage from './components/pages/NotFoundPage.vue';
 
 //inizializzare il router
 const router = new VueRouter({
@@ -12,7 +13,7 @@ const router = new VueRouter({
     routes: [
         {path: '/', component: HomePage, name: 'home'},
         {path: '/contacts', component: ContactPage, name: 'contacts'},
-        {path: '*', component: NotFoundPage, name: 'notFound'}
+        {path: '*', component: NotFoundPage}
     ]
 });
 

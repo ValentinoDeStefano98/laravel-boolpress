@@ -39,7 +39,7 @@ import Loader from '../Loader.vue';
 import Pagination from '../Pagination.vue';
 
     export default{
-        name: "PostsList",
+        name: 'PostsList',
         components: {
             Loader,
             Pagination

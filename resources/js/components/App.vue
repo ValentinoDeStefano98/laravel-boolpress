@@ -3,7 +3,6 @@
         <Header/>
         <main>
             <div class="container py-3">
-                <!-- <PostsList/> -->
                 <router-view></router-view>
             </div>
         </main>

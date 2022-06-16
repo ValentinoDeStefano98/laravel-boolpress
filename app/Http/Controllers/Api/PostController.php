@@ -17,8 +17,8 @@ class PostController extends Controller
     {
         //$posts = Post::orderBy('updated_at', 'DESC')->with('tags', 'Category')->get();
         //paginazione
-        $posts = Post::orderBy('updated_at', 'DESC')->with('Category', 'test')->paginate(5);
-        return response()->json($posts);
+        $posts = Post::orderBy('updated_at', 'DESC')->with('tags', 'Category')->paginate(5);
+        return response()->json(compact('posts'));
     }
 
     /**
@@ -50,7 +50,7 @@ class PostController extends Controller
      */
     public function show($id)   
     {
-        $post = Post::with('Category', 'tags')->find($id);
+        $post = Post::with('tags', 'Category')->find($id);
         return response()->json($post);
     }
 
