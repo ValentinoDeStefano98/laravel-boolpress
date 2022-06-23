@@ -21,7 +21,7 @@
                                 <p class="card-text article">
                                     {{post.content}}
                                 </p>
-                                <router-link class="btn btn-primary" :to="{name: 'post-detail', params: {id: post.id}}">Leggi</router-link>
+                                <router-link class="btn btn-primary" :to="{name: 'post-detail', params: {slug: post.slug}}">Leggi</router-link>
                             </div>
                         </div>
                     </div>
@@ -29,7 +29,7 @@
             </div>
         </div>
         <p v-else>Non ci sono articoli</p>
-        <Pagination :pagination="pagination"/>
+        <Pagination :pagination="pagination" @on-page-change="getPosts"/>
     </div>
 </template>
 
@@ -51,12 +51,12 @@ import Pagination from '../Pagination.vue';
                 pagination: {}
             }
         },
+        emit: ['on-page-change'],
         methods: {
-            getPosts(){
-                axios.get("http://127.0.0.1:8000/api/posts")
+            getPosts(page = 1){
+                axios.get("http://127.0.0.1:8000/api/posts?page=" + page)
                     .then((res)=>{
                         const {data, current_page, last_page} = res.data.posts;
-
                         this.posts = data;
 
                         this.pagination = {
